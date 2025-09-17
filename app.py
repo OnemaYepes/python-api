@@ -30,6 +30,10 @@ def get_day(day_id):
 def post_days():
     return jsonify({"success": True}), 201
 
+@app.route("/week", methods=["GET"])
+def get_week():
+    return jsonify(days)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
