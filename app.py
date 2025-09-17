@@ -34,6 +34,10 @@ def post_days():
 def get_week():
     return jsonify(days)
 
+@app.route("/week", methods=["POST"])
+def post_week():
+    return jsonify({"success": True}), 201
+
 
 if __name__ == "__main__":
     app.run(debug=True)
